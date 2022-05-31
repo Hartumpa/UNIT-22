@@ -50,7 +50,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(6,1fr);
-        grid-template-rows: 250px;
+        grid-template-rows: auto;
         gap: 20px;
         margin-top: 20px;
         margin-bottom: 40px;     
@@ -92,7 +92,7 @@
       #works>div{
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(2,300px);
+        grid-template-rows: repeat(2,auto);
         gap:40px 30px;
         margin-top: 30px;
       }
@@ -115,30 +115,34 @@
       /* Medium Screen */
       @media only screen and (min-width: 500px) and (max-width: 768px) {
         #banner{
+          display: flex;
           flex-direction: column;
+          width: 90%;
         }
         #services{
           grid-template-columns: repeat(3,1fr);
-          grid-template-rows: repeat(2,250px);
+          grid-template-rows: repeat(2,auto);
         }
         #works>div{
           grid-template-columns: repeat(2,1fr);
-          grid-template-rows: repeat(4,280px);
+          grid-template-rows: repeat(4,auto);
         }
       }
 
       /* Small Screen */
       @media only screen and (min-width: 320px) and (max-width: 499px) {
         #banner{
+          display: flex;
           flex-direction: column;
+          width: 90%;
         }
         #services{
           grid-template-columns: repeat(2,1fr);
-          grid-template-rows: repeat(3,250px);
+          grid-template-rows: repeat(3,auto);
         }
         #works>div{
           grid-template-columns: repeat(1,1fr);
-          grid-template-rows: repeat(8,280px);
+          grid-template-rows: repeat(8,auto);
         }
       }
 
